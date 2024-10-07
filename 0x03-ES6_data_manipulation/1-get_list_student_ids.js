@@ -1,7 +1,6 @@
 export default function getListStudentIds(arr) {
-  try {
+  if (arr instanceof Array)
     return arr.map(item => item.id);
-  } catch (TypeError) {
-    return [];
   }
+  return [];
 }
